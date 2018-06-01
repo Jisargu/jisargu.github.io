@@ -14,8 +14,27 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="styles.fc7d9026e3eb13cc61d6.css"></head>
+<!--header-->
+<link href="assets/css/paper-kit.css?v=2.1.0" rel="stylesheet" />
+<!--Google maps-->
+<script>
+function initMap() {
+  var uluru = {lat: 20.738155, lng: -103.399520};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 12,
+    center: uluru
+  });
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map
+  });
+}
+</script>
+<script  defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMu6bROihmvED80pjzXu0fcwIE9K48i1Q&callback=initMap">
+</script>
+<link rel="stylesheet" href="styles.ba0da1f6477d835ec147.css"></head>
 <body>
   <app-root></app-root>
-<script type="text/javascript" src="runtime.a66f828dca56eeb90e02.js"></script><script type="text/javascript" src="polyfills.b4daf421c94934f530d4.js"></script><script type="text/javascript" src="main.c878ecf1aa98c5912169.js"></script></body>
+<script type="text/javascript" src="runtime.a66f828dca56eeb90e02.js"></script><script type="text/javascript" src="polyfills.b4daf421c94934f530d4.js"></script><script type="text/javascript" src="main.f1d94666cc269393a89a.js"></script></body>
 </html>
