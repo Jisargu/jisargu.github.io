@@ -22,25 +22,43 @@
   <!--header-->
   <link href="assets/css/general_and_parallax.css" rel="stylesheet" />
 
-  <!--Contacto-->
-  <script src="assets/js/contactform.js"></script>
+  <!--navbar-->
+  <script>$(function(){ 
+      var navMain = $(".navbar-collapse"); // avoid dependency on #id
+      // "a:not([data-toggle])" - to avoid issues caused
+      // when you have dropdown inside navbar
+      navMain.on("click", "a:not([data-toggle])", null, function () {
+          navMain.collapse('hide');
+      });
+  });</script>
+  <script>
+    $(window).on("resize load",function() {
+  if($(window).width()<966){
+  $("#navbar_contenido").removeClass("nav-pills");
+}
+else{
+  $("#navbar_contenido").addClass("nav-pills");
+}
+});
+  </script>
   
+
+<!--Google maps-->
+<script src="assets/js/mapsAPI.js"></script>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMu6bROihmvED80pjzXu0fcwIE9K48i1Q&callback=initMap"></script>
+
+
   <!--WOW js-->
   <script src="assets/js/wow.min.js"></script>
   <link rel="stylesheet" href="assets/css/animate.css">
-  <script>new WOW().init();</script>
-
-
-  <!--Google maps-->
-  <script src="assets/js/mapsAPI.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMu6bROihmvED80pjzXu0fcwIE9K48i1Q&callback=initMap">
-
+  <script>
+    new WOW().init();
 
   </script>
 <link rel="stylesheet" href="styles.34c57ab7888ec1573f9c.css"></head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar" data-offset="0">
   <app-root></app-root>
-<script type="text/javascript" src="runtime.a66f828dca56eeb90e02.js"></script><script type="text/javascript" src="polyfills.b4daf421c94934f530d4.js"></script><script type="text/javascript" src="main.352d3ab77d9d7db5bbbd.js"></script></body>
+<script type="text/javascript" src="runtime.a66f828dca56eeb90e02.js"></script><script type="text/javascript" src="polyfills.b4daf421c94934f530d4.js"></script><script type="text/javascript" src="main.f092076f26d5dd4434dd.js"></script></body>
 
 </html>
